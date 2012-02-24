@@ -1,27 +1,28 @@
 public class rajamantri extends Activity {
     
 	
-	@Override
-	public void onbackpressed() {
+<<<<<<< HEAD
+    @Override
+	public void OnBackPressed() {
 		
 
 		
 	}
 
 	@Override
-	protected void onpostresume() {
+	protected void OnPostResume() {
 		// TODO Auto-generated method stub
-		super.onpostresume();
+		super.OnPostResume();
 	}
 
 	@Override
-	public boolean onkeydown(int keyCode, KeyEvent event) {
+	public boolean OnKeyDown(int keyCode, KeyEvent event) {
 		AlertDialog dialog = new AlertDialog.Builder(this).create();
 		dialog.setTitle("Exit game!");
 		dialog.setMessage("Are you sure you want to exit the game?");
-		dialog.setButton("Exit", new DialogInterface.OnClickListener() {
-			
-			public void onClick(DialogInterface dialog, int abc) {
+	    dialog.setButton("Exit", new DialogInterface.OnClickListener() {
+    			
+			public void OnClick(DialogInterface dialog, int abc) {
 				
 				finish();
 				
@@ -29,31 +30,92 @@ public class rajamantri extends Activity {
 		});
 		dialog.setButton2("Cancel", new DialogInterface.OnClickListener() {
 			
-			public void onClick(DialogInterface dialog, int which) {
+			public void OnClick(DialogInterface dialog, int which) {
 				
 				dialog.dismiss();
 				
 			}
 		});
 		dialog.show();
-		return super.onKeyDown(keyCode, event);
+		return super.OnKeyDown(keyCode, event);
 	}
 
 	@Override
-	public void onlowmemory() {
+	public void OnLowMemory() {
 		AlertDialog dialog = new AlertDialog.Builder(this).create();
 		dialog.setTitle("Low memory!");
 		dialog.setMessage("Too many apps open, kindly close some other apps and try again!");
 		dialog.setButton("Exit", new DialogInterface.OnClickListener() {
 			
+			public void OnClick(DialogInterface dialog, int which) {
+=======
+	@Override
+    public void onbackpressed() {
+		
+    
+		
+    }
+
+    @Override
+    protected void onpostresume() {
+		// TODO Auto-generated method stub
+        super.onpostresume();
+    }
+     
+    @Override
+    // To exit the game
+	public boolean onkeydown(int keyCode, KeyEvent event) {
+        AlertDialog dialog = new AlertDialog.Builder(this).create();
+        dialog.setTitle("Exit game!");
+        dialog.setMessage("Are you sure you want to exit the game?");
+        dialog.setButton("Exit", new DialogInterface.OnClickListener() {
+			
+            public void onClick(DialogInterface dialog, int which) {
+				
+                finish();
+				
+            }
+        });
+        dialog.setButton2("Cancel", new DialogInterface.OnClickListener() {
+			
+            public void onClick(DialogInterface dialog, int which) {
+				
+                dialog.dismiss();
+				
+            }
+        });
+        DialogShow();
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void onlowmemory() {
+        AlertDialog dialog = new AlertDialog.Builder(this).create();
+        dialog.setTitle("Low memory!");
+        dialog.setMessage("Too many apps open, kindly close some other apps and try again!");
+        dialog.setButton("Exit", new DialogInterface.OnClickListener() {
+			
 			public void onClick(DialogInterface dialog, int which) {
+>>>>>>> develop
 				
 				finish();
 				
 			}
 		});
 		
+<<<<<<< HEAD
 		dialog.show();
+
+		
+		super.OnLowMemory();
+	}
+
+	@Override
+	protected void OnPause() {
+		// TODO Auto-generated method stub
+		super.OnPause();
+=======
+		DialogShow();
 
 		
 		super.onLowMemory();
@@ -63,6 +125,7 @@ public class rajamantri extends Activity {
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
+>>>>>>> develop
 	}
 
 	String[] solutionArray = { "RAJA", "MANTRI", "CHOR", "SIPAHI"};
@@ -122,9 +185,15 @@ public class rajamantri extends Activity {
 	String nextTurn = "";
 	
 	
+<<<<<<< HEAD
+    public void OnRestart(){
+    	
+    	super.OnRestart();
+=======
     public void onRestart(){
     	
     	super.onRestart();
+>>>>>>> develop
     /*	player1_name = "" ;
     	player2_name = "";
     	player3_name = "";
@@ -143,9 +212,15 @@ public class rajamantri extends Activity {
     	
     }
     
+<<<<<<< HEAD
+    public void OnResume(){
+    	
+    	super.OnResume();
+=======
     public void onResume(){
     	
     	super.onResume();
+>>>>>>> develop
     	/*player1_name = "" ;
     	player2_name = "";
     	player3_name = "";
@@ -167,8 +242,13 @@ public class rajamantri extends Activity {
 
 
 
+<<<<<<< HEAD
+    public void OnCreate(Bundle savedInstanceState) {
+        super.OnCreate(savedInstanceState);
+=======
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+>>>>>>> develop
         setContentView(R.layout.welcome);
       
         i = 0;
@@ -178,7 +258,11 @@ public class rajamantri extends Activity {
         btnHelp = (Button)findViewById(R.id.btnHelp);
         btnHelp.setOnClickListener(new OnClickListener() {
 			
+<<<<<<< HEAD
+			public void OnClick(View v) {
+=======
 			public void onClick(View v) {
+>>>>>>> develop
 				setContentView(R.layout.help);
 				 // Create the adView
 			    AdView adView = new AdView(RajaMantri.this, AdSize.BANNER, "a14e156523d01de");
@@ -190,12 +274,20 @@ public class rajamantri extends Activity {
 			    // Initiate a generic request to load it with an ad
 			    adView.loadAd(new AdRequest());
 				TextView txtHelp = (TextView)findViewById(R.id.txtHelp);
+<<<<<<< HEAD
+				String text = "Welcome to nostalgia! This is the paper free version of Raja Mantri Chor Sipahi.\n\nThe game involves bluffing with facial expressions and good guessing. This is a very popular childhood game in India played among kids often during their long summer vacations.\n\nThe game has 4 paper chits with Chor (thief), Sipahi (police), Raja (king) and Mantri (minister). The chits are folded at the start of the game and one of the 4 players will press Shuffle each one of the four players is supposed to secretly (by taking the phone and not letting the others see it)pick one chit by clicking on it, the player then clicks on the chit again to fold it back. All the players will then secretly open their chits and read what they have got. \n\nThe player who gets the chit with Raja written on it will say MERA MANTRI KAUN? (Who is my minister?). The player who got the chit with Mantri will say MEIN! (Me), The player with Raja will then say CHOR SIPAHI KA PATA LAGAO (find out who is the theif and who is the soldier). The player with Mantri will then guess who is the Chor (Thief), if he is wrong then his points are deducted and if he is correct he gets more points and the points from the player who got Chor (Thief) are deducted.\n\nIf the guess is correct the player with Chor is wrapped on his wrist by the Mantri, and if the Mantri is wrong then the Chor gets to hit his wrist.";
+=======
 				String text = "Welcome to nostalgia! This is the paper free version of Raja Mantri Chor Sipahi.\n\nThe game involves bluffing with facial expressions and good guessing. This is a very popular childhood game in India played among kids often during their long summer vacations.\n\nThe game has 4 paper chits with Chor (thief), Sipahi (police), Raja (king) and Mantri (minister). The chits are folded at the start of the game and one of the 4 players will press SHUFFLE each one of the four players is supposed to secretly (by taking the phone and not letting the others see it)pick one chit by clicking on it, the player then clicks on the chit again to fold it back. All the players will then secretly open their chits and read what they have got. \n\nThe player who gets the chit with Raja written on it will say MERA MANTRI KAUN? (Who is my minister?). The player who got the chit with Mantri will say MEIN! (Me), The player with Raja will then say CHOR SIPAHI KA PATA LAGAO (find out who is the theif and who is the soldier). The player with Mantri will then guess who is the Chor (Thief), if he is wrong then his points are deducted and if he is correct he gets more points and the points from the player who got Chor (Thief) are deducted.\n\nIf the guess is correct the player with Chor is wrapped on his wrist by the Mantri, and if the Mantri is wrong then the Chor gets to hit his wrist.";
+>>>>>>> develop
 				txtHelp.setText(text);
 				Button btnBack = (Button)findViewById(R.id.btnMainMenuHelp);
 				btnBack.setOnClickListener(new OnClickListener() {
 					
+<<<<<<< HEAD
+					public void OnClick(View v) {
+=======
 					public void onClick(View v) {
+>>>>>>> develop
 						
 						Intent i = new Intent(RajaMantri.this, RajaMantri.class);
 						RajaMantri.this.startActivity(i);
@@ -208,7 +300,11 @@ public class rajamantri extends Activity {
         btnRajaMantri = (Button) findViewById(R.id.btnRajaMantri);
         btnRajaMantri.setOnClickListener(new OnClickListener() {
         	
+<<<<<<< HEAD
+ 		public void OnClick(View v) {
+=======
  		public void onClick(View v) {
+>>>>>>> develop
  			// TODO Auto-generated method stub
  		setContentView(R.layout.rmcsp);	
  		 // Create the adView
@@ -252,7 +348,11 @@ public class rajamantri extends Activity {
  		btnMainMenu.setOnClickListener(new OnClickListener() {
 			
 			
+<<<<<<< HEAD
+			public void OnClick(View v) {
+=======
 			public void onClick(View v) {
+>>>>>>> develop
 				Intent i = new Intent(RajaMantri.this, RajaMantri.class);
 				RajaMantri.this.startActivity(i);
 				finish();
@@ -263,7 +363,11 @@ public class rajamantri extends Activity {
  		btnSignin = (Button) findViewById(R.id.btnsignin);
  		btnSignin.setOnClickListener(new OnClickListener() {
 			
+<<<<<<< HEAD
+			public void OnClick(View v) {
+=======
 			public void onClick(View v) {
+>>>>>>> develop
 				// TODO Auto-generated method stub
 				
 				player1_name = editTxtPlayer1.getText().toString();
@@ -290,7 +394,11 @@ public class rajamantri extends Activity {
 				    adView.loadAd(new AdRequest());
 
 					txtTurn = (TextView)findViewById(R.id.txtTurn);
+<<<<<<< HEAD
+					txtTurn.setText("Click on Shuffle!");
+=======
 					txtTurn.setText("Click on SHUFFLE!");
+>>>>>>> develop
 					playersArray[0] = player1_name;
 			 		playersArray[1] = player2_name;
 			 		playersArray[2] = player3_name;
@@ -314,17 +422,30 @@ public class rajamantri extends Activity {
 				
 				btnPlay.setOnClickListener(new OnClickListener() {
 		 			
+<<<<<<< HEAD
+		 			public void OnClick(View v) {
+		 				// TODO Auto-generated method stub
+		 				
+		 				if(btnPlay.getText().equals("Shuffle")){
+		 				
+		 					RajaMantri.this.Shuffle();
+=======
 		 			public void onClick(View v) {
 		 				// TODO Auto-generated method stub
 		 				
 		 				if(btnPlay.getText().equals("SHUFFLE")){
 		 				
 		 					RajaMantri.this.shuffle();
+>>>>>>> develop
 		 					
 		 				}else{
 		 					
 		 					
+<<<<<<< HEAD
+		 					RajaMantri.this.MakeGuess();
+=======
 		 					RajaMantri.this.makeGuess();
+>>>>>>> develop
 										
 		 					Log.v("RajaMantri", "########## Player Name:" + player1_name +" Role:" + player1_role);
 		 					Log.v("RajaMantri", "########## Player Name:" + player2_name +" Role:" + player2_role);
@@ -352,11 +473,19 @@ public class rajamantri extends Activity {
     }
     
     
+<<<<<<< HEAD
+    public void MakeGuess(){
+    	
+    	btnPlay.setText("Shuffle");
+			count = 0;
+			btnPlay.setText("Shuffle");
+=======
     public void makeGuess(){
     	
     	btnPlay.setText("SHUFFLE");
 			count = 0;
 			btnPlay.setText("SHUFFLE");
+>>>>>>> develop
 			
 			btnPod1.setClickable(true);
 			btnPod2.setClickable(true);
@@ -434,7 +563,11 @@ public class rajamantri extends Activity {
 			btnPod1.setOnClickListener(new OnClickListener() {
 				
 			
+<<<<<<< HEAD
+				public void OnClick(View v) {
+=======
 				public void onClick(View v) {
+>>>>>>> develop
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player1);
 					if(player1.equals("CHOR")){
@@ -453,7 +586,11 @@ public class rajamantri extends Activity {
 					btnPod2.setClickable(false);
 					btnPod3.setClickable(false);
 					btnPod4.setClickable(false);
+<<<<<<< HEAD
+					UpdateScore();
+=======
 					updateScore();
+>>>>>>> develop
 				}
 			});
 		}	
@@ -464,7 +601,11 @@ public class rajamantri extends Activity {
 			
 			btnPod2.setOnClickListener(new OnClickListener() {
 				
+<<<<<<< HEAD
+				public void OnClick(View v) {
+=======
 				public void onClick(View v) {
+>>>>>>> develop
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player2);
 					if(player2.equals("CHOR")){
@@ -483,7 +624,11 @@ public class rajamantri extends Activity {
 					btnPod2.setClickable(false);
 					btnPod3.setClickable(false);
 					btnPod4.setClickable(false);
+<<<<<<< HEAD
+					UpdateScore();
+=======
 					updateScore();
+>>>>>>> develop
 				}
 			});
 		}	
@@ -494,7 +639,11 @@ public class rajamantri extends Activity {
 			btnPod3.setOnClickListener(new OnClickListener() {
 				
 				
+<<<<<<< HEAD
+				public void OnClick(View v) {
+=======
 				public void onClick(View v) {
+>>>>>>> develop
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player3);
 					if(player3.equals("CHOR")){
@@ -513,7 +662,11 @@ public class rajamantri extends Activity {
 					btnPod2.setClickable(false);
 					btnPod3.setClickable(false);
 					btnPod4.setClickable(false);
+<<<<<<< HEAD
+					UpdateScore();
+=======
 					updateScore();
+>>>>>>> develop
 				}
 			});
 		}
@@ -525,7 +678,11 @@ public class rajamantri extends Activity {
 			btnPod4.setOnClickListener(new OnClickListener() {
 				
 			
+<<<<<<< HEAD
+				public void OnClick(View v) {
+=======
 				public void onClick(View v) {
+>>>>>>> develop
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player4);
 					if(player4.equals("CHOR")){
@@ -544,7 +701,11 @@ public class rajamantri extends Activity {
 					btnPod2.setClickable(false);
 					btnPod3.setClickable(false);
 					btnPod4.setClickable(false);
+<<<<<<< HEAD
+					UpdateScore();
+=======
 					updateScore();
+>>>>>>> develop
 				}
 			});
 		}
@@ -552,18 +713,30 @@ public class rajamantri extends Activity {
     }
     
     
+<<<<<<< HEAD
+    public void Shuffle(){
+    	
+    	btnPlay.setText("Guess");
+			btnPlay.setClickable(false);
+			ShuffleArray(solutionArray);
+=======
     public void shuffle(){
     	
     	btnPlay.setText("Guess");
 			btnPlay.setClickable(false);
 			shuffleArray(solutionArray);
+>>>>>>> develop
 			txtTurn.setText(player1_name + "'s" + " turn!");
 			nextTurn = player2_name;
 			btnPod1 = (Button)findViewById(R.id.btnPod1);
 			btnPod1.setBackgroundResource(R.drawable.podtlclosed);
 			btnPod1.setOnClickListener(new OnClickListener() {
 				
+<<<<<<< HEAD
+				public void OnClick(View v) {
+=======
 				public void onClick(View v) {
+>>>>>>> develop
 					// TODO Auto-generated method stub
 					player1 = solutionArray[0];
 					btnPod1.setText(player1);
@@ -669,7 +842,11 @@ public class rajamantri extends Activity {
 					
 					btnPod1.setOnClickListener(new OnClickListener() {
 						
+<<<<<<< HEAD
+						public void OnClick(View v) {
+=======
 						public void onClick(View v) {
+>>>>>>> develop
 							// TODO Auto-generated method stub
 							btnPod1.setClickable(false);
 							count++;
@@ -695,7 +872,11 @@ public class rajamantri extends Activity {
 			btnPod2.setBackgroundResource(R.drawable.podtrclosed);
 			btnPod2.setOnClickListener(new OnClickListener() {
 					
+<<<<<<< HEAD
+					public void OnClick(View v) {
+=======
 					public void onClick(View v) {
+>>>>>>> develop
 						// TODO Auto-generated method stub
 						player2 = solutionArray[1];
 						btnPod2.setText(player2);
@@ -794,7 +975,11 @@ public class rajamantri extends Activity {
 						txtTurn.setText("Click again to close the chit!");
 						btnPod2.setOnClickListener(new OnClickListener() {
 							
+<<<<<<< HEAD
+							public void OnClick(View v) {
+=======
 							public void onClick(View v) {
+>>>>>>> develop
 								// TODO Auto-generated method stub
 								btnPod2.setClickable(false);
 								count++;
@@ -821,7 +1006,11 @@ public class rajamantri extends Activity {
 			btnPod3.setBackgroundResource(R.drawable.podblclosed);
 			btnPod3.setOnClickListener(new OnClickListener() {
 					
+<<<<<<< HEAD
+					public void OnClick(View v) {
+=======
 					public void onClick(View v) {
+>>>>>>> develop
 						// TODO Auto-generated method stub
 						player3 = solutionArray[2];
 						btnPod3.setText(player3);
@@ -920,7 +1109,11 @@ public class rajamantri extends Activity {
 						txtTurn.setText("Click again to close the chit!");
 						btnPod3.setOnClickListener(new OnClickListener() {
 							
+<<<<<<< HEAD
+							public void OnClick(View v) {
+=======
 							public void onClick(View v) {
+>>>>>>> develop
 								// TODO Auto-generated method stub
 								btnPod3.setClickable(false);
 								count++;
@@ -950,7 +1143,11 @@ public class rajamantri extends Activity {
 			
 			btnPod4.setOnClickListener(new OnClickListener() {
 					
+<<<<<<< HEAD
+					public void OnClick(View v) {
+=======
 					public void onClick(View v) {
+>>>>>>> develop
 						// TODO Auto-generated method stub
 						player4 = solutionArray[3];
 						btnPod4.setText(player4);
@@ -1048,7 +1245,11 @@ public class rajamantri extends Activity {
 						txtTurn.setText("Click again to close the chit!");
 						btnPod4.setOnClickListener(new OnClickListener() {
 							
+<<<<<<< HEAD
+							public void OnClick(View v) {
+=======
 							public void onClick(View v) {
+>>>>>>> develop
 								// TODO Auto-generated method stub
 								btnPod4.setClickable(false);
 								count++;
@@ -1078,7 +1279,11 @@ public class rajamantri extends Activity {
     	
     }
     
+<<<<<<< HEAD
+    public void SetRole(String role, String player){
+=======
     public void setRole(String role, String player){
+>>>>>>> develop
     	
     	if(player1.equals("MANTRI")){
 			
@@ -1100,7 +1305,11 @@ public class rajamantri extends Activity {
     	
     } 
     
+<<<<<<< HEAD
+    void ShuffleArray(String[] solutionArray)
+=======
     void shuffleArray(String[] solutionArray)
+>>>>>>> develop
     {
     	Random rnd = new Random();
     	for (int i = solutionArray.length - 1; i >= 0; i--)
@@ -1113,7 +1322,11 @@ public class rajamantri extends Activity {
     		}
 	}
     
+<<<<<<< HEAD
+    static void UpdateScore(){
+=======
     static void updateScore(){
+>>>>>>> develop
     	
     	Log.v("AkhandBakar", "##########"+ guess);
     	if(player1_role.equals("MANTRI"))
@@ -1784,3 +1997,21 @@ public class rajamantri extends Activity {
 	Log.v("AkhandBakar", player4 + " [" + p4score + "]");
     }
 }
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+>>>>>>> develop

@@ -47,6 +47,7 @@ public class rajamantri extends Activity {
 		dialog.setButton("Exit", new DialogInterface.OnClickListener() {
 			
 			public void OnClick(DialogInterface dialog, int which) {
+
 				
 				finish();
 				
@@ -63,6 +64,7 @@ public class rajamantri extends Activity {
 	protected void OnPause() {
 		// TODO Auto-generated method stub
 		super.OnPause();
+
 	}
 
 	String[] solutionArray = { "RAJA", "MANTRI", "CHOR", "SIPAHI"};
@@ -125,6 +127,7 @@ public class rajamantri extends Activity {
     public void OnRestart(){
     	
     	super.OnRestart();
+
     /*	player1_name = "" ;
     	player2_name = "";
     	player3_name = "";
@@ -146,6 +149,7 @@ public class rajamantri extends Activity {
     public void OnResume(){
     	
     	super.OnResume();
+
     	/*player1_name = "" ;
     	player2_name = "";
     	player3_name = "";
@@ -165,8 +169,6 @@ public class rajamantri extends Activity {
     }
 
 
-
-
     public void OnCreate(Bundle savedInstanceState) {
         super.OnCreate(savedInstanceState);
         setContentView(R.layout.welcome);
@@ -179,6 +181,7 @@ public class rajamantri extends Activity {
         btnHelp.setOnClickListener(new OnClickListener() {
 			
 			public void OnClick(View v) {
+
 				setContentView(R.layout.help);
 				 // Create the adView
 			    AdView adView = new AdView(RajaMantri.this, AdSize.BANNER, "a14e156523d01de");
@@ -196,7 +199,8 @@ public class rajamantri extends Activity {
 				btnBack.setOnClickListener(new OnClickListener() {
 					
 					public void OnClick(View v) {
-						
+
+					
 						Intent i = new Intent(RajaMantri.this, RajaMantri.class);
 						RajaMantri.this.startActivity(i);
 						finish();
@@ -208,7 +212,9 @@ public class rajamantri extends Activity {
         btnRajaMantri = (Button) findViewById(R.id.btnRajaMantri);
         btnRajaMantri.setOnClickListener(new OnClickListener() {
         	
+
  		public void OnClick(View v) {
+
  			// TODO Auto-generated method stub
  		setContentView(R.layout.rmcsp);	
  		 // Create the adView
@@ -253,6 +259,7 @@ public class rajamantri extends Activity {
 			
 			
 			public void OnClick(View v) {
+
 				Intent i = new Intent(RajaMantri.this, RajaMantri.class);
 				RajaMantri.this.startActivity(i);
 				finish();
@@ -263,9 +270,9 @@ public class rajamantri extends Activity {
  		btnSignin = (Button) findViewById(R.id.btnsignin);
  		btnSignin.setOnClickListener(new OnClickListener() {
 			
+
 			public void OnClick(View v) {
-				// TODO Auto-generated method stub
-				
+	
 				player1_name = editTxtPlayer1.getText().toString();
 		 		player2_name = editTxtPlayer2.getText().toString();
 		 		player3_name = editTxtPlayer3.getText().toString();
@@ -314,17 +321,21 @@ public class rajamantri extends Activity {
 				
 				btnPlay.setOnClickListener(new OnClickListener() {
 		 			
+
 		 			public void OnClick(View v) {
 		 				// TODO Auto-generated method stub
 		 				
 		 				if(btnPlay.getText().equals("Shuffle")){
 		 				
 		 					RajaMantri.this.Shuffle();
+
 		 					
 		 				}else{
 		 					
 		 					
+
 		 					RajaMantri.this.MakeGuess();
+
 										
 		 					Log.v("RajaMantri", "########## Player Name:" + player1_name +" Role:" + player1_role);
 		 					Log.v("RajaMantri", "########## Player Name:" + player2_name +" Role:" + player2_role);
@@ -357,6 +368,7 @@ public class rajamantri extends Activity {
     	btnPlay.setText("Shuffle");
 			count = 0;
 			btnPlay.setText("Shuffle");
+
 			
 			btnPod1.setClickable(true);
 			btnPod2.setClickable(true);
@@ -435,6 +447,7 @@ public class rajamantri extends Activity {
 				
 			
 				public void OnClick(View v) {
+
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player1);
 					if(player1.equals("CHOR")){
@@ -453,7 +466,9 @@ public class rajamantri extends Activity {
 					btnPod2.setClickable(false);
 					btnPod3.setClickable(false);
 					btnPod4.setClickable(false);
+
 					UpdateScore();
+
 				}
 			});
 		}	
@@ -464,7 +479,9 @@ public class rajamantri extends Activity {
 			
 			btnPod2.setOnClickListener(new OnClickListener() {
 				
+
 				public void OnClick(View v) {
+
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player2);
 					if(player2.equals("CHOR")){
@@ -483,7 +500,9 @@ public class rajamantri extends Activity {
 					btnPod2.setClickable(false);
 					btnPod3.setClickable(false);
 					btnPod4.setClickable(false);
+
 					UpdateScore();
+
 				}
 			});
 		}	
@@ -495,6 +514,7 @@ public class rajamantri extends Activity {
 				
 				
 				public void OnClick(View v) {
+
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player3);
 					if(player3.equals("CHOR")){
@@ -514,6 +534,7 @@ public class rajamantri extends Activity {
 					btnPod3.setClickable(false);
 					btnPod4.setClickable(false);
 					UpdateScore();
+
 				}
 			});
 		}
@@ -525,7 +546,9 @@ public class rajamantri extends Activity {
 			btnPod4.setOnClickListener(new OnClickListener() {
 				
 			
+
 				public void OnClick(View v) {
+
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player4);
 					if(player4.equals("CHOR")){
@@ -545,6 +568,7 @@ public class rajamantri extends Activity {
 					btnPod3.setClickable(false);
 					btnPod4.setClickable(false);
 					UpdateScore();
+
 				}
 			});
 		}
@@ -564,6 +588,7 @@ public class rajamantri extends Activity {
 			btnPod1.setOnClickListener(new OnClickListener() {
 				
 				public void OnClick(View v) {
+
 					// TODO Auto-generated method stub
 					player1 = solutionArray[0];
 					btnPod1.setText(player1);
@@ -669,7 +694,9 @@ public class rajamantri extends Activity {
 					
 					btnPod1.setOnClickListener(new OnClickListener() {
 						
+
 						public void OnClick(View v) {
+
 							// TODO Auto-generated method stub
 							btnPod1.setClickable(false);
 							count++;
@@ -695,7 +722,9 @@ public class rajamantri extends Activity {
 			btnPod2.setBackgroundResource(R.drawable.podtrclosed);
 			btnPod2.setOnClickListener(new OnClickListener() {
 					
+
 					public void OnClick(View v) {
+
 						// TODO Auto-generated method stub
 						player2 = solutionArray[1];
 						btnPod2.setText(player2);
@@ -794,7 +823,9 @@ public class rajamantri extends Activity {
 						txtTurn.setText("Click again to close the chit!");
 						btnPod2.setOnClickListener(new OnClickListener() {
 							
+
 							public void OnClick(View v) {
+
 								// TODO Auto-generated method stub
 								btnPod2.setClickable(false);
 								count++;
@@ -821,7 +852,9 @@ public class rajamantri extends Activity {
 			btnPod3.setBackgroundResource(R.drawable.podblclosed);
 			btnPod3.setOnClickListener(new OnClickListener() {
 					
+
 					public void OnClick(View v) {
+
 						// TODO Auto-generated method stub
 						player3 = solutionArray[2];
 						btnPod3.setText(player3);
@@ -920,7 +953,9 @@ public class rajamantri extends Activity {
 						txtTurn.setText("Click again to close the chit!");
 						btnPod3.setOnClickListener(new OnClickListener() {
 							
+
 							public void OnClick(View v) {
+
 								// TODO Auto-generated method stub
 								btnPod3.setClickable(false);
 								count++;
@@ -950,7 +985,9 @@ public class rajamantri extends Activity {
 			
 			btnPod4.setOnClickListener(new OnClickListener() {
 					
+
 					public void OnClick(View v) {
+
 						// TODO Auto-generated method stub
 						player4 = solutionArray[3];
 						btnPod4.setText(player4);
@@ -1048,7 +1085,9 @@ public class rajamantri extends Activity {
 						txtTurn.setText("Click again to close the chit!");
 						btnPod4.setOnClickListener(new OnClickListener() {
 							
+
 							public void OnClick(View v) {
+
 								// TODO Auto-generated method stub
 								btnPod4.setClickable(false);
 								count++;
@@ -1078,7 +1117,9 @@ public class rajamantri extends Activity {
     	
     }
     
+
     public void SetRole(String role, String player){
+
     	
     	if(player1.equals("MANTRI")){
 			
@@ -1100,7 +1141,9 @@ public class rajamantri extends Activity {
     	
     } 
     
+
     void ShuffleArray(String[] solutionArray)
+
     {
     	Random rnd = new Random();
     	for (int i = solutionArray.length - 1; i >= 0; i--)
@@ -1113,7 +1156,9 @@ public class rajamantri extends Activity {
     		}
 	}
     
+
     static void UpdateScore(){
+
     	
     	Log.v("AkhandBakar", "##########"+ guess);
     	if(player1_role.equals("MANTRI"))
@@ -1761,14 +1806,11 @@ public class rajamantri extends Activity {
     			p2score=j;
 				
 			}
-			
-			
 			}
     		}
 
     	}
-    	
-    
+      
     Log.v("AkhandBakar", "##########Score "+ i);
 	txtPlayer1.setText("1."+ player1_name + " [" + i + "]");
 	Log.v("AkhandBakar", player1 + " [" + i + "]");
@@ -1799,3 +1841,6 @@ public class rajamantri extends Activity {
 
 
 
+
+=======
+>>>>>>> develop
