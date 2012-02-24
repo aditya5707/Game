@@ -1,7 +1,7 @@
 public class rajamantri extends Activity {
     
 	
-	@Override
+    @Override
 	public void onbackpressed() {
 		
 
@@ -19,8 +19,8 @@ public class rajamantri extends Activity {
 		AlertDialog dialog = new AlertDialog.Builder(this).create();
 		dialog.setTitle("Exit game!");
 		dialog.setMessage("Are you sure you want to exit the game?");
-		dialog.setButton("Exit", new DialogInterface.OnClickListener() {
-			
+	    dialog.setButton("Exit", new DialogInterface.OnClickListener() {
+    			
 			public void onClick(DialogInterface dialog, int abc) {
 				
 				finish();
@@ -1784,3 +1784,18 @@ public class rajamantri extends Activity {
 	Log.v("AkhandBakar", player4 + " [" + p4score + "]");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

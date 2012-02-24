@@ -21,7 +21,7 @@ public class rajamantri extends Activity {
 		dialog.setMessage("Are you sure you want to exit the game?");
 		dialog.setButton("Exit", new DialogInterface.OnClickListener() {
 			
-			public void onClick(DialogInterface dialog, int which) {
+			public void onClick(DialogInterface dialog, int abc) {
 				
 				finish();
 				
