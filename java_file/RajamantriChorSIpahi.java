@@ -15,7 +15,7 @@ public class rajamantri extends Activity {
     }
      
     @Override
-    // 
+    // To exit the game
 	public boolean onkeydown(int keyCode, KeyEvent event) {
         AlertDialog dialog = new AlertDialog.Builder(this).create();
         dialog.setTitle("Exit game!");
@@ -36,7 +36,7 @@ public class rajamantri extends Activity {
 				
             }
         });
-        dialog.show();
+        DialogShow();
         return super.onKeyDown(keyCode, event);
     }
 
@@ -54,7 +54,7 @@ public class rajamantri extends Activity {
 			}
 		});
 		
-		dialog.show();
+		DialogShow();
 
 		
 		super.onLowMemory();
