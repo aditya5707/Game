@@ -1806,21 +1806,3 @@ public class rajamantri extends Activity {
 	Log.v("AkhandBakar", player4 + " [" + p4score + "]");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> develop
